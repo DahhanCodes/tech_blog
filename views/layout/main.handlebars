@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="hero">
+            <div>
+                <nav class"nav">
+                    <a class="link" href="/">Home</a>
+                    <a class="link" href="../dashboard.handlebars">Dashboard</a>
+                    <!--If logged in will be able to see logout option-->
+                    {{#if loggedIn}}
+                    <a class="link" href="/" id="logout">Logout</a>
+                    {{else}}
+                    <!--If not logged-in will be presented with the option to-->
+                    <a class="link" href="../login.handlebars">Login</a>
+                    {{/if}}
+                </nav>
+            </div>
+
+            <h1 class="app-title">
+                <i class="fab"></i>Tech Blog
+            </h1>
+        </header>
+
+        <main>
+            <!--this is where handlebars are implemented-->
+            {{{ body }}}
+        </main>
+    </div>
+    <!--If logged in, logout script will be available for use-->
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
