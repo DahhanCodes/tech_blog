@@ -4,7 +4,7 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description:
-:mag: A full CRUD Back End Application.
+:mag: A full CRUD Full-Stack Application.
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
